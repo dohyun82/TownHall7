@@ -151,12 +151,12 @@
       <section class="slide">
         <div class="w-full max-w-7xl">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">
-            2025 하반기 ~ 2026 상반기 로드맵
+            2025 하반기 로드맵
           </h2>
           <div class="bg-white p-4 rounded-xl shadow-lg text-xs w-full">
             <div
               class="grid"
-              style="grid-template-columns: 90px 1fr; gap: 0.5rem 0"
+              style="grid-template-columns: 90px 1fr; gap: 1.5rem 0"
             >
               <!-- Timeline Header -->
               <div></div>
@@ -179,21 +179,21 @@
               >
                 식권대장
               </div>
-              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-14">
+              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-20">
                 <div class="roadmap-task bg-red-500" style="grid-column: 1 / 2">
                   로봇배달
                 </div>
                 <div class="roadmap-task bg-red-500" style="grid-column: 2 / 5">
-                  탐색 개선
+                  제휴식당 탐색 개선
                 </div>
                 <div
                   class="roadmap-task bg-red-500 self-end"
                   style="grid-column: 4 / 6"
                 >
-                  원격주문
+                  원격주문(사이렌오더)
                 </div>
                 <div class="roadmap-task bg-red-500" style="grid-column: 7 / 9">
-                  함께결제 변경
+                  함께결제 구조 변경
                 </div>
               </div>
 
@@ -203,7 +203,7 @@
               >
                 구내식당
               </div>
-              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-8">
+              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-12">
                 <div
                   class="roadmap-task bg-yellow-500"
                   style="grid-column: 2 / 4"
@@ -224,7 +224,7 @@
               >
                 BPO
               </div>
-              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-8">
+              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-12">
                 <div
                   class="roadmap-task bg-green-500"
                   style="grid-column: 1 / 3"
@@ -235,7 +235,7 @@
                   class="roadmap-task bg-green-500"
                   style="grid-column: 4 / 7"
                 >
-                  수수료/예산 관리
+                  퀵대장 수수료 관리/ 부서예산
                 </div>
               </div>
 
@@ -245,24 +245,24 @@
               >
                 관리기능
               </div>
-              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-14">
+              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-20">
                 <div
                   class="roadmap-task bg-blue-500"
                   style="grid-column: 2 / 4"
                 >
-                  결제 취소
+                  사장님 결제 취소
                 </div>
                 <div
                   class="roadmap-task bg-blue-500 self-end"
                   style="grid-column: 3 / 6"
                 >
-                  역발행 고도화
+                  사장님 역발행 고도화
                 </div>
                 <div
                   class="roadmap-task bg-blue-500"
                   style="grid-column: 7 / 9"
                 >
-                  공지기능 고도화
+                  고객사 공지기능 고도화
                 </div>
               </div>
 
@@ -272,7 +272,7 @@
               >
                 기술개선
               </div>
-              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-20">
+              <div class="border-t pt-2 grid grid-cols-8 gap-1 h-24">
                 <div
                   class="roadmap-task bg-orange-600"
                   style="grid-column: 1 / 6"
@@ -283,19 +283,19 @@
                   class="roadmap-task bg-orange-600 self-center"
                   style="grid-column: 1 / 7"
                 >
-                  ISMS 간편인증
+                  ISMS 간편인증 취득
                 </div>
                 <div
                   class="roadmap-task bg-orange-600 self-end"
                   style="grid-column: 3 / 5"
                 >
-                  로그 최적화
+                  서비스 로그 최적화
                 </div>
                 <div
                   class="roadmap-task bg-orange-600 self-center"
                   style="grid-column: 6 / 9"
                 >
-                  ECS CI/CD
+                  ECS CI/CD 고도화
                 </div>
               </div>
             </div>
@@ -356,11 +356,11 @@
                   <span class="text-blue-500 mr-3 mt-1">✓</span>
                   <div>
                     <strong class="font-semibold text-gray-700"
-                      >탐색 정확도 개선</strong
+                      >제휴식당 탐색 개선</strong
                     >
                     <br /><span class="text-sm text-gray-600"
-                      >사용자 만족도 향상을 위한 위치 기반 추천 로직
-                      고도화</span
+                      >위치기반서비스를 이용하여 사용자 주변 제휴식당을 정확하게
+                      탐색 및 추천하는 서비스 제공</span
                     >
                   </div>
                 </li>
@@ -382,7 +382,8 @@
                       >함께결제 구조 변경</strong
                     >
                     <br /><span class="text-sm text-gray-600"
-                      >새로운 결제 방식으로 바이럴 효과 및 사용 재미 증대</span
+                      >리더가 방을 생성하고 게스트가 참가하는 편리한 함께결제
+                      경험 제공</span
                     >
                   </div>
                 </li>
@@ -398,7 +399,7 @@
                   <span class="text-green-500 mr-3 mt-1">✓</span>
                   <div>
                     <strong class="font-semibold text-gray-700"
-                      >실시간 메뉴판 제공</strong
+                      >실시간 식단표 제공</strong
                     >
                     <br /><span class="text-sm text-gray-600"
                       >앱에서 바로 확인하는 메뉴로 구내식당 이용률 증대</span
@@ -562,28 +563,52 @@
               </p>
               <ul class="space-y-3">
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span
-                  ><strong class="font-semibold text-gray-700"
-                    >세금계산서 역발행</strong
-                  >
+                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <div>
+                    <strong class="font-semibold text-gray-700"
+                      >사장님 세금계산서 역발행 고도화</strong
+                    >
+                    <br /><span class="text-sm text-gray-600"
+                      >기존 바로빌에서 별도로 진행하던 세금계산서 역발행을
+                      사장님 웹에서 통합하여 편리하게 처리</span
+                    >
+                  </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span
-                  ><strong class="font-semibold text-gray-700"
-                    >고객사 맞춤 공지</strong
-                  >
+                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <div>
+                    <strong class="font-semibold text-gray-700"
+                      >고객사 맞춤 공지</strong
+                    >
+                    <br /><span class="text-sm text-gray-600"
+                      >고객사가 직접 관리하는 공지사항 시스템으로 이미지, 팝업
+                      등 다양한 형태의 맞춤형 공지 제공</span
+                    >
+                  </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span
-                  ><strong class="font-semibold text-gray-700"
-                    >사장님 결제 취소</strong
-                  >
+                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <div>
+                    <strong class="font-semibold text-gray-700"
+                      >사장님 결제 취소</strong
+                    >
+                    <br /><span class="text-sm text-gray-600"
+                      >사장님 앱/웹에서 직접 결제 취소를 처리할 수 있는 기능으로
+                      CS 업무 감소 및 제휴점 서비스 향상</span
+                    >
+                  </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span
-                  ><strong class="font-semibold text-gray-700"
-                    >퀵대장 부서 예산 관리</strong
-                  >
+                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <div>
+                    <strong class="font-semibold text-gray-700"
+                      >퀵대장 부서 예산 관리</strong
+                    >
+                    <br /><span class="text-sm text-gray-600"
+                      >부서별 예산 범위 내에서 퀵서비스를 이용할 수 있는 예산
+                      관리 기능</span
+                    >
+                  </div>
                 </li>
               </ul>
             </div>
@@ -602,7 +627,8 @@
                     <strong class="font-semibold text-gray-700"
                       >데이터 기반 의사결정 지원</strong
                     ><br /><span class="text-sm text-gray-600"
-                      >핵심 통계 지표 관리 시스템 구축</span
+                      >스노우플레이크를 이용한 대마플 통계 개선 및 내부 통계
+                      시스템 고도화로 정확한 데이터 분석 환경 구축</span
                     >
                   </div>
                 </li>
@@ -612,7 +638,8 @@
                     <strong class="font-semibold text-gray-700"
                       >장애 대응 속도 향상</strong
                     ><br /><span class="text-sm text-gray-600"
-                      >서비스 로그 시스템 최적화 및 모니터링 강화</span
+                      >웹소켓/TCP Gateway 로깅 강화를 통해 구조화된 로그
+                      분석으로 문제 상황 원인 분석 효율 향상</span
                     >
                   </div>
                 </li>
@@ -622,7 +649,19 @@
                     <strong class="font-semibold text-gray-700"
                       >개발 생산성 극대화</strong
                     ><br /><span class="text-sm text-gray-600"
-                      >ECS CI/CD 고도화를 통한 배포 시간 단축</span
+                      >새로운 인프라 환경에 최적화된 ECS CI/CD 파이프라인으로
+                      배포 시간 단축 (8분 → 5분) 및 서비스 안정성 향상</span
+                    >
+                  </div>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-indigo-500 mr-3 mt-1">✓</span>
+                  <div>
+                    <strong class="font-semibold text-gray-700"
+                      >정보보안 체계 강화</strong
+                    ><br /><span class="text-sm text-gray-600"
+                      >ISMS 간편인증 취득을 통한 정보보안 실질적 보호 강화, 대외
+                      신뢰도 향상 및 법령 준거성 제고</span
                     >
                   </div>
                 </li>
