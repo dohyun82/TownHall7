@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>제품개발실 2025년 하반기 주요 추진 계획</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -97,13 +96,6 @@
         height: 100%;
         background-color: #2563eb;
         transition: width 0.3s ease;
-      }
-      .chart-container {
-        position: relative;
-        width: 100%;
-        max-width: 450px;
-        margin: 2rem auto 0;
-        height: 250px;
       }
       .card {
         transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -340,90 +332,184 @@
 
       <!-- Slide 5: 식권대장 -->
       <section class="slide">
-        <div class="w-full max-w-5xl">
-          <h3 class="text-3xl md:text-4xl font-bold text-center mb-10">
-            핵심 서비스: 식권대장 & 구내식당
-          </h3>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-lg card h-full">
-              <h4 class="text-2xl font-bold mb-4 text-blue-700">식권대장</h4>
-              <p class="text-gray-600 mb-6">
+        <div class="w-full max-w-6xl">
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg grid md:grid-cols-2 gap-8 items-center"
+          >
+            <div class="order-1">
+              <h4 class="text-3xl font-bold mb-4 text-blue-700">
+                식권대장 스마트 진화
+              </h4>
+              <p class="text-gray-600 mb-6 text-lg">
                 사용자 중심의 개선으로 더 스마트하고 편리한 식사 경험을
                 제공합니다.
               </p>
-              <ul class="space-y-4">
+              <ul class="space-y-4 text-gray-700">
                 <li class="flex items-start">
-                  <span class="text-blue-500 mr-3 mt-1">✓</span>
+                  <span class="text-blue-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >제휴식당 탐색 개선</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
-                      >위치기반서비스를 이용하여 사용자 주변 제휴식당을 정확하게
-                      탐색 및 추천하는 서비스 제공</span
+                    <strong class="font-semibold">제휴식당 탐색 개선</strong
+                    ><br /><span class="text-sm"
+                      >위치기반서비스로 주변 제휴식당을 정확하게 탐색 및
+                      추천</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-blue-500 mr-3 mt-1">✓</span>
+                  <span class="text-blue-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
+                    <strong class="font-semibold"
                       >원격 주문 도입 (사이렌오더)</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    ><br /><span class="text-sm"
                       >점심 피크 시간대 대기 시간을 줄여 사용자 경험 개선</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-blue-500 mr-3 mt-1">✓</span>
+                  <span class="text-blue-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >함께결제 구조 변경</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
-                      >리더가 방을 생성하고 게스트가 참가하는 편리한 함께결제
-                      경험 제공</span
+                    <strong class="font-semibold">함께결제 구조 변경</strong
+                    ><br /><span class="text-sm"
+                      >리더가 방을 생성하고 게스트가 참가하는 편리한 결제
+                      시스템</span
                     >
                   </div>
                 </li>
               </ul>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-lg card h-full">
-              <h4 class="text-2xl font-bold mb-4 text-green-700">구내식당</h4>
-              <p class="text-gray-600 mb-6">
+            <div
+              class="order-2 flex flex-col justify-center items-center bg-gray-50 rounded-lg p-6 h-full min-h-[300px]"
+            >
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  핵심 개선 기능
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >위치기반 탐색</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >사이렌오더</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >함께결제</span
+                  >
+                </div>
+              </div>
+              <div class="w-full border-t border-gray-200 my-6"></div>
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  기대 효과
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >대기시간 단축</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >이용 편의성 증대</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >사용자 만족도 향상</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 6: 구내식당 -->
+      <section class="slide">
+        <div class="w-full max-w-6xl">
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg grid md:grid-cols-2 gap-8 items-center"
+          >
+            <div class="order-1">
+              <h4 class="text-3xl font-bold mb-4 text-green-700">
+                구내식당 사업 확장
+              </h4>
+              <p class="text-gray-600 mb-6 text-lg">
                 운영 효율화와 사업 확장을 통해 새로운 가치를 창출합니다.
               </p>
-              <ul class="space-y-4">
+              <ul class="space-y-4 text-gray-700">
                 <li class="flex items-start">
-                  <span class="text-green-500 mr-3 mt-1">✓</span>
+                  <span class="text-green-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >실시간 식단표 제공</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">실시간 식단표 제공</strong
+                    ><br /><span class="text-sm"
                       >앱에서 바로 확인하는 메뉴로 구내식당 이용률 증대</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-green-500 mr-3 mt-1">✓</span>
+                  <span class="text-green-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >식권 발급기 연동</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">식권 발급기 연동</strong
+                    ><br /><span class="text-sm"
                       >외부 키오스크 연동을 통해 B2C 사업 기회 창출</span
                     >
                   </div>
                 </li>
               </ul>
             </div>
+            <div
+              class="order-2 flex flex-col justify-center items-center bg-gray-50 rounded-lg p-6 h-full min-h-[300px]"
+            >
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  서비스 범위
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >실시간 식단표</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >키오스크 연동</span
+                  >
+                </div>
+              </div>
+              <div class="w-full border-t border-gray-200 my-6"></div>
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  사업 기회
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >B2C 시장 진출</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >구내식당 이용률 증대</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >신규 수익원 창출</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Slide 6: Section 2 Title -->
+      <!-- Slide 7: Section 2 Title -->
       <section class="slide bg-blue-700 text-white">
         <div class="text-center">
           <h2 class="text-5xl md:text-6xl font-extrabold">
@@ -435,7 +521,7 @@
         </div>
       </section>
 
-      <!-- Slide 7: 퀵대장(화물) 런칭 -->
+      <!-- Slide 8: 퀵대장(화물) 런칭 -->
       <section class="slide">
         <div class="w-full max-w-6xl">
           <div
@@ -534,7 +620,7 @@
         </div>
       </section>
 
-      <!-- Slide 8: Section 3 Title -->
+      <!-- Slide 9: Section 3 Title -->
       <section class="slide bg-green-700 text-white">
         <div class="text-center">
           <h2 class="text-5xl md:text-6xl font-extrabold">
@@ -546,65 +632,56 @@
         </div>
       </section>
 
-      <!-- Slide 9: 기반 강화: 관리 기능 & 기술 기반 -->
+      <!-- Slide 10: 더 스마트한 관리 기능 -->
       <section class="slide">
-        <div class="w-full max-w-5xl">
-          <h3 class="text-3xl md:text-4xl font-bold text-center mb-10">
-            기반 강화: 스마트한 관리 & 안정적 플랫폼
-          </h3>
-          <div class="grid md:grid-cols-2 gap-8 items-start">
-            <!-- Card 1: Smart Management -->
-            <div class="bg-white p-8 rounded-xl shadow-lg card h-full">
-              <h4 class="text-2xl font-bold mb-4 text-orange-700">
+        <div class="w-full max-w-6xl">
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg grid md:grid-cols-2 gap-8 items-center"
+          >
+            <div class="order-1">
+              <h4 class="text-3xl font-bold mb-4 text-orange-700">
                 더 스마트한 관리 기능
               </h4>
-              <p class="text-gray-600 mb-6">
+              <p class="text-gray-600 mb-6 text-lg">
                 사장님과 고객사의 운영 효율을 극대화합니다.
               </p>
-              <ul class="space-y-3">
+              <ul class="space-y-4 text-gray-700">
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <span class="text-orange-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
+                    <strong class="font-semibold"
                       >사장님 세금계산서 역발행 고도화</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    ><br /><span class="text-sm"
                       >기존 바로빌에서 별도로 진행하던 세금계산서 역발행을
                       사장님 웹에서 통합하여 편리하게 처리</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <span class="text-orange-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >고객사 맞춤 공지</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">고객사 맞춤 공지</strong
+                    ><br /><span class="text-sm"
                       >고객사가 직접 관리하는 공지사항 시스템으로 이미지, 팝업
                       등 다양한 형태의 맞춤형 공지 제공</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <span class="text-orange-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >사장님 결제 취소</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">사장님 결제 취소</strong
+                    ><br /><span class="text-sm"
                       >사장님 앱/웹에서 직접 결제 취소를 처리할 수 있는 기능으로
                       CS 업무 감소 및 제휴점 서비스 향상</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-orange-500 mr-3 mt-1">✓</span>
+                  <span class="text-orange-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >퀵대장 부서 예산 관리</strong
-                    >
-                    <br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">퀵대장 부서 예산 관리</strong
+                    ><br /><span class="text-sm"
                       >부서별 예산 범위 내에서 퀵서비스를 이용할 수 있는 예산
                       관리 기능</span
                     >
@@ -612,54 +689,111 @@
                 </li>
               </ul>
             </div>
-            <!-- Card 2: Tech Foundation -->
-            <div class="bg-white p-8 rounded-xl shadow-lg card h-full">
-              <h4 class="text-2xl font-bold mb-4 text-indigo-700">
+            <div
+              class="order-2 flex flex-col justify-center items-center bg-gray-50 rounded-lg p-6 h-full min-h-[300px]"
+            >
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  관리 기능 영역
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >세금계산서 역발행</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >고객사 공지</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >결제 취소</span
+                  >
+                  <span
+                    class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >예산 관리</span
+                  >
+                </div>
+              </div>
+              <div class="w-full border-t border-gray-200 my-6"></div>
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  기대 효과
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >운영 효율 극대화</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >CS 업무 감소</span
+                  >
+                  <span
+                    class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >서비스 품질 향상</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 11: 더 빠르고 안정적인 플랫폼 -->
+      <section class="slide">
+        <div class="w-full max-w-6xl">
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg grid md:grid-cols-2 gap-8 items-center"
+          >
+            <div class="order-1">
+              <h4 class="text-3xl font-bold mb-4 text-indigo-700">
                 더 빠르고 안정적인 플랫폼
               </h4>
-              <p class="text-gray-600 mb-6">
+              <p class="text-gray-600 mb-6 text-lg">
                 신속한 서비스 개선과 데이터 기반 의사결정을 지원합니다.
               </p>
-              <ul class="space-y-4">
+              <ul class="space-y-4 text-gray-700">
                 <li class="flex items-start">
-                  <span class="text-indigo-500 mr-3 mt-1">✓</span>
+                  <span class="text-indigo-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
+                    <strong class="font-semibold"
                       >데이터 기반 의사결정 지원</strong
-                    ><br /><span class="text-sm text-gray-600"
+                    ><br /><span class="text-sm"
                       >스노우플레이크를 이용한 대마플 통계 개선 및 내부 통계
                       시스템 고도화로 정확한 데이터 분석 환경 구축</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-indigo-500 mr-3 mt-1">✓</span>
+                  <span class="text-indigo-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >장애 대응 속도 향상</strong
-                    ><br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">장애 대응 속도 향상</strong
+                    ><br /><span class="text-sm"
                       >웹소켓/TCP Gateway 로깅 강화를 통해 구조화된 로그
                       분석으로 문제 상황 원인 분석 효율 향상</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-indigo-500 mr-3 mt-1">✓</span>
+                  <span class="text-indigo-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >개발 생산성 극대화</strong
-                    ><br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">개발 생산성 극대화</strong
+                    ><br /><span class="text-sm"
                       >새로운 인프라 환경에 최적화된 ECS CI/CD 파이프라인으로
                       배포 시간 단축 (8분 → 5분) 및 서비스 안정성 향상</span
                     >
                   </div>
                 </li>
                 <li class="flex items-start">
-                  <span class="text-indigo-500 mr-3 mt-1">✓</span>
+                  <span class="text-indigo-500 font-bold mr-3 mt-1">→</span>
                   <div>
-                    <strong class="font-semibold text-gray-700"
-                      >정보보안 체계 강화</strong
-                    ><br /><span class="text-sm text-gray-600"
+                    <strong class="font-semibold">정보보안 체계 강화</strong
+                    ><br /><span class="text-sm"
                       >ISMS 간편인증 취득을 통한 정보보안 실질적 보호 강화, 대외
                       신뢰도 향상 및 법령 준거성 제고</span
                     >
@@ -667,27 +801,66 @@
                 </li>
               </ul>
             </div>
+            <div
+              class="order-2 flex flex-col justify-center items-center bg-gray-50 rounded-lg p-6 h-full min-h-[300px]"
+            >
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  기술 혁신 영역
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >스노우플레이크</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >로깅 시스템</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >ECS CI/CD</span
+                  >
+                  <span
+                    class="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >ISMS 인증</span
+                  >
+                </div>
+              </div>
+              <div class="w-full border-t border-gray-200 my-6"></div>
+              <div class="w-full text-center">
+                <h5
+                  class="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3"
+                >
+                  핵심 성과
+                </h5>
+                <div class="flex flex-wrap gap-2 justify-center">
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >배포시간 단축 (8분→5분)</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >장애 대응 효율 향상</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >데이터 분석 환경 구축</span
+                  >
+                  <span
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm"
+                    >정보보안 강화</span
+                  >
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Slide 10: ECS CI/CD 고도화 (Chart) -->
-      <section class="slide">
-        <div class="w-full max-w-3xl text-center">
-          <h4 class="text-3xl font-bold mb-4 text-indigo-700">
-            개발 생산성 극대화: CI/CD 고도화
-          </h4>
-          <p class="text-gray-600 mb-10 text-lg">
-            배포 시간을 50% 단축하여 운영 효율을 극대화하고<br />더 빠른 서비스
-            개선을 가능하게 합니다.
-          </p>
-          <div class="chart-container">
-            <canvas id="deploymentChart"></canvas>
-          </div>
-        </div>
-      </section>
-
-      <!-- Slide 11: Final -->
+      <!-- Slide 12: Final -->
       <section class="slide">
         <div class="text-center">
           <h2 class="text-5xl md:text-6xl font-black text-gray-800">
@@ -715,7 +888,7 @@
           />
         </svg>
       </button>
-      <div id="slide-counter">1 / 11</div>
+      <div id="slide-counter">1 / 12</div>
       <button id="next-btn" title="Next Slide (→)">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -746,7 +919,6 @@
         const slideCounter = document.getElementById("slide-counter");
         const progressBar = document.getElementById("progress-bar");
         let currentSlide = 0;
-        let deploymentChartInstance = null;
 
         function showSlide(index) {
           if (index < 0 || index >= slides.length) return;
@@ -757,12 +929,6 @@
 
           currentSlide = index;
           updateUI();
-
-          // Animate chart on slide view
-          const chartCanvas = slides[index].querySelector("#deploymentChart");
-          if (chartCanvas && !deploymentChartInstance) {
-            createDeploymentChart();
-          }
         }
 
         function updateUI() {
@@ -793,73 +959,6 @@
         });
 
         showSlide(0);
-
-        function createDeploymentChart() {
-          if (deploymentChartInstance) return;
-          const ctx = document
-            .getElementById("deploymentChart")
-            .getContext("2d");
-          deploymentChartInstance = new Chart(ctx, {
-            type: "bar",
-            data: {
-              labels: ["기존", "개선 후"],
-              datasets: [
-                {
-                  label: "배포 시간 (분)",
-                  data: [10, 5],
-                  backgroundColor: [
-                    "rgba(255, 159, 64, 0.5)",
-                    "rgba(75, 192, 192, 0.5)",
-                  ],
-                  borderColor: [
-                    "rgba(255, 159, 64, 1)",
-                    "rgba(75, 192, 192, 1)",
-                  ],
-                  borderWidth: 1,
-                  barThickness: 50,
-                },
-              ],
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              animation: {
-                duration: 1500,
-                easing: "easeInOutQuart",
-              },
-              plugins: {
-                legend: { display: false },
-                title: {
-                  display: true,
-                  text: "배포 시간 50% 단축",
-                  font: { size: 18, weight: "bold" },
-                  color: "#374151",
-                  padding: { top: 0, bottom: 20 },
-                },
-                tooltip: {
-                  callbacks: {
-                    label: (context) =>
-                      `${context.dataset.label}: ${context.raw}분`,
-                  },
-                },
-              },
-              scales: {
-                y: {
-                  beginAtZero: true,
-                  title: {
-                    display: true,
-                    text: "시간(분)",
-                  },
-                },
-                x: {
-                  grid: {
-                    display: false,
-                  },
-                },
-              },
-            },
-          });
-        }
       });
     </script>
   </body>
