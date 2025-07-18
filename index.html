@@ -39,34 +39,175 @@
         align-items: center;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-        transform: scale(0.98);
+        transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+        transform: scale(0.95) translateY(20px);
         background-color: #f9fafb;
       }
       .slide.bg-blue-700 {
-        background: #1d4ed8 !important;
+        background: linear-gradient(
+          135deg,
+          #1d4ed8,
+          #3b82f6,
+          #60a5fa
+        ) !important;
         color: white !important;
-      }
-      .slide.bg-blue-700 * {
-        color: inherit;
+        animation: gradientShift 10s ease-in-out infinite;
       }
       .slide.bg-green-700 {
-        background: #15803d !important;
-      }
-      .slide.bg-gradient-to-br {
         background: linear-gradient(
-          to bottom right,
-          #4ade80,
+          135deg,
+          #15803d,
           #22c55e,
-          #16a34a
+          #4ade80
         ) !important;
+        color: white !important;
+        animation: gradientShift 12s ease-in-out infinite;
       }
+      .slide.bg-green-600 {
+        background: linear-gradient(
+          135deg,
+          #16a34a,
+          #22c55e,
+          #4ade80
+        ) !important;
+        color: white !important;
+        animation: gradientShift 8s ease-in-out infinite;
+      }
+      .slide.bg-gray-800 {
+        background: linear-gradient(
+          135deg,
+          #1f2937,
+          #374151,
+          #4b5563
+        ) !important;
+        color: white !important;
+        animation: gradientShift 15s ease-in-out infinite;
+      }
+
+      @keyframes gradientShift {
+        0%,
+        100% {
+          filter: hue-rotate(0deg) brightness(1);
+        }
+        25% {
+          filter: hue-rotate(5deg) brightness(1.05);
+        }
+        50% {
+          filter: hue-rotate(-5deg) brightness(0.95);
+        }
+        75% {
+          filter: hue-rotate(3deg) brightness(1.02);
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideInLeft {
+        from {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInRight {
+        from {
+          opacity: 0;
+          transform: translateX(50px);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeInScale {
+        from {
+          opacity: 0;
+          transform: scale(0.8);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+
+      @keyframes bounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-10px);
+        }
+        60% {
+          transform: translateY(-5px);
+        }
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.05);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
       .slide.active {
         opacity: 1 !important;
         visibility: visible !important;
         z-index: 10;
-        transform: scale(1);
+        transform: scale(1) translateY(0);
       }
+
+      .slide.active h1,
+      .slide.active h2 {
+        animation: slideInUp 1s ease-out 0.2s both;
+      }
+
+      .slide.active p {
+        animation: slideInUp 1s ease-out 0.4s both;
+      }
+
+      .slide.active .card:nth-child(1) {
+        animation: slideInLeft 0.8s ease-out 0.6s both;
+      }
+
+      .slide.active .card:nth-child(2) {
+        animation: slideInUp 0.8s ease-out 0.8s both;
+      }
+
+      .slide.active .card:nth-child(3) {
+        animation: slideInRight 0.8s ease-out 1s both;
+      }
+
+      .slide.active .roadmap-task {
+        animation: fadeInScale 0.6s ease-out both;
+      }
+
+      .slide.active .text-7xl {
+        animation: bounce 2s ease-in-out 1s infinite;
+      }
+
       #presentation-nav {
         position: fixed;
         bottom: 20px;
@@ -76,65 +217,214 @@
         align-items: center;
         gap: 20px;
         z-index: 100;
-        background-color: rgba(255, 255, 255, 0.9);
-        backdrop-filter: blur(5px);
-        padding: 8px 20px;
-        border-radius: 99px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.95),
+          rgba(255, 255, 255, 0.85)
+        );
+        backdrop-filter: blur(10px);
+        padding: 12px 24px;
+        border-radius: 50px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s ease;
       }
+
+      #presentation-nav:hover {
+        transform: translateX(-50%) translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      }
+
       #presentation-nav button {
-        background: none;
+        background: linear-gradient(135deg, #10b981, #059669);
         border: none;
         cursor: pointer;
-        font-size: 24px;
-        color: #374151;
-        transition: color 0.2s;
+        font-size: 20px;
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
       }
+
       #presentation-nav button:hover {
-        color: #059669;
+        transform: scale(1.1);
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4);
+        background: linear-gradient(135deg, #059669, #047857);
       }
+
+      #presentation-nav button:active {
+        transform: scale(0.95);
+      }
+
       #slide-counter {
         font-size: 14px;
-        font-weight: 500;
-        color: #4b5563;
-        min-width: 40px;
+        font-weight: 600;
+        color: #374151;
+        min-width: 50px;
         text-align: center;
+        background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+        padding: 8px 16px;
+        border-radius: 20px;
+        border: 1px solid rgba(156, 163, 175, 0.3);
       }
+
       #progress-container {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
         height: 6px;
-        background-color: #e5e7eb;
+        background: linear-gradient(90deg, #f3f4f6, #e5e7eb);
         z-index: 99;
       }
+
       #progress-bar {
         width: 0;
         height: 100%;
-        background-color: #059669;
-        transition: width 0.3s ease;
+        background: linear-gradient(90deg, #10b981, #059669, #047857);
+        transition: width 0.5s ease;
+        box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
       }
+
       .card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
       }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.1),
+          transparent
+        );
+        transition: left 0.5s;
+      }
+
       .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-          0 4px 6px -4px rgb(0 0 0 / 0.1);
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
       }
+
+      .card:hover::before {
+        left: 100%;
+      }
+
       .roadmap-task {
-        padding: 6px 4px;
-        border-radius: 6px;
+        padding: 8px 6px;
+        border-radius: 8px;
         color: white;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 11px;
-        line-height: 1;
+        line-height: 1.2;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         text-align: center;
         border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        position: relative;
+      }
+
+      .roadmap-task:hover {
+        transform: scale(1.05);
+        z-index: 10;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .emoji-float {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+      }
+
+      .logo-pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      .title-gradient {
+        background: linear-gradient(45deg, #ffffff, #e5e7eb, #ffffff);
+        background-size: 200% 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientMove 3s ease-in-out infinite;
+      }
+
+      @keyframes gradientMove {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .bg-animated {
+        background-size: 400% 400%;
+        animation: gradientFlow 15s ease infinite;
+      }
+
+      @keyframes gradientFlow {
+        0% {
+          background-position: 0% 50%;
+        }
+        25% {
+          background-position: 100% 50%;
+        }
+        50% {
+          background-position: 100% 100%;
+        }
+        75% {
+          background-position: 0% 100%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      .tag-hover {
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .tag-hover:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .icon-bounce {
+        transition: transform 0.3s ease;
+      }
+
+      .icon-bounce:hover {
+        transform: scale(1.2) rotate(5deg);
+      }
+
+      /* 반응형 애니메이션 조정 */
+      @media (max-width: 768px) {
+        .slide.active .card:nth-child(1),
+        .slide.active .card:nth-child(2),
+        .slide.active .card:nth-child(3) {
+          animation: fadeInScale 0.8s ease-out both;
+        }
       }
     </style>
   </head>
@@ -142,24 +432,26 @@
     <div id="presentation-container">
       <!-- Slide 1: Title -->
       <section
-        class="slide active bg-gradient-to-br from-green-400 via-green-500 to-green-600 relative"
+        class="slide active bg-gradient-to-br from-green-400 via-green-500 to-green-600 relative bg-animated"
       >
         <div class="text-center text-white">
-          <div class="text-2xl md:text-3xl font-bold mb-4 opacity-90">
-            제품개발실 타운홀
+          <div
+            class="text-2xl md:text-3xl font-bold mb-4 opacity-90 emoji-float"
+          >
+            제품개발실 타운홀 🎯
           </div>
           <h1
-            class="text-5xl md:text-6xl font-black tracking-tight leading-tight"
+            class="text-5xl md:text-6xl font-black tracking-tight leading-tight title-gradient"
           >
             2025년 하반기 핵심 추진 계획
           </h1>
           <p class="text-xl md:text-2xl opacity-80 mt-6">
-            더 나은 서비스, 더 큰 성장을 위한 우리의 여정
+            더 나은 서비스, 더 큰 성장을 위한 우리의 여정 🚀
           </p>
         </div>
         <!-- 우측 하단 로고 영역 -->
         <div class="absolute bottom-8 right-8">
-          <div class="flex items-center text-white opacity-70">
+          <div class="flex items-center text-white opacity-70 logo-pulse">
             <div
               class="w-8 h-8 bg-white bg-opacity-20 rounded mr-2 flex items-center justify-center"
             >
@@ -332,26 +624,32 @@
       <section class="slide">
         <div class="w-full max-w-4xl text-left">
           <h2 class="text-2xl font-bold text-green-600 mb-12 text-center">
-            오늘 나눌 이야기
+            📋 오늘 나눌 이야기
           </h2>
           <div class="space-y-8 text-2xl md:text-3xl font-medium">
             <div
-              class="p-6 rounded-lg bg-white shadow-lg border border-gray-100 flex items-center"
+              class="card p-6 rounded-lg bg-white shadow-lg border border-gray-100 flex items-center"
             >
-              <span class="text-green-500 font-bold text-4xl mr-6">01</span>
-              <span class="text-gray-700">우리 서비스를 더 스마트하게</span>
+              <span class="text-green-500 font-bold text-4xl mr-6 icon-bounce"
+                >01</span
+              >
+              <span class="text-gray-700">우리 서비스를 더 스마트하게 💡</span>
             </div>
             <div
-              class="p-6 rounded-lg bg-white shadow-lg border border-gray-100 flex items-center"
+              class="card p-6 rounded-lg bg-white shadow-lg border border-gray-100 flex items-center"
             >
-              <span class="text-green-500 font-bold text-4xl mr-6">02</span>
-              <span class="text-gray-700">새로운 영역으로의 도전</span>
+              <span class="text-green-500 font-bold text-4xl mr-6 icon-bounce"
+                >02</span
+              >
+              <span class="text-gray-700">새로운 영역으로의 도전 🚀</span>
             </div>
             <div
-              class="p-6 rounded-lg bg-white shadow-lg border border-gray-100 flex items-center"
+              class="card p-6 rounded-lg bg-white shadow-lg border border-gray-100 flex items-center"
             >
-              <span class="text-green-500 font-bold text-4xl mr-6">03</span>
-              <span class="text-gray-700">더 탄탄한 기술 기반 구축</span>
+              <span class="text-green-500 font-bold text-4xl mr-6 icon-bounce"
+                >03</span
+              >
+              <span class="text-gray-700">더 탄탄한 기술 기반 구축 🔧</span>
             </div>
           </div>
         </div>
@@ -437,15 +735,15 @@
                 </h5>
                 <div class="flex flex-wrap gap-2 justify-center">
                   <span
-                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm border border-green-200"
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm border border-green-200 tag-hover"
                     >📍 위치기반 탐색</span
                   >
                   <span
-                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm border border-green-200"
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm border border-green-200 tag-hover"
                     >⚡ 사이렌오더</span
                   >
                   <span
-                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm border border-green-200"
+                    class="bg-green-100 text-green-700 px-3 py-1 rounded-full font-medium text-sm border border-green-200 tag-hover"
                     >🤝 함께결제</span
                   >
                 </div>
@@ -1053,16 +1351,20 @@
       </section>
 
       <!-- Slide 12: Final -->
-      <section class="slide bg-green-600 text-white">
+      <section class="slide bg-green-600 text-white bg-animated">
         <div class="text-center">
-          <div class="text-7xl mb-6">🤝</div>
-          <h2 class="text-5xl md:text-6xl font-black">
+          <div class="text-7xl mb-6 emoji-float">🤝</div>
+          <h2 class="text-5xl md:text-6xl font-black title-gradient">
             함께 만들어갈 2025년 하반기
           </h2>
           <p class="text-2xl text-green-100 mt-6">
-            궁금한 점이나 제안사항이 있으시면 언제든지!
+            궁금한 점이나 제안사항이 있으시면 언제든지! ✨
           </p>
-          <p class="text-xl font-semibold mt-8">🙋‍♀️ Q&A 🙋‍♂️</p>
+          <div
+            class="mt-8 inline-block bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-8 py-4 tag-hover"
+          >
+            <p class="text-xl font-semibold">🙋‍♀️ Q&A 🙋‍♂️</p>
+          </div>
         </div>
       </section>
     </div>
@@ -1181,6 +1483,50 @@
         });
 
         showSlide(0);
+
+        // 추가 상호작용 효과
+        const addInteractiveEffects = () => {
+          // 모든 태그에 클릭 효과 추가
+          document.querySelectorAll(".tag-hover").forEach((tag) => {
+            tag.addEventListener("click", function () {
+              this.style.transform = "scale(0.95)";
+              setTimeout(() => {
+                this.style.transform = "";
+              }, 150);
+            });
+          });
+
+          // 아이콘들에 마우스 이벤트 추가
+          document.querySelectorAll(".icon-bounce").forEach((icon) => {
+            icon.addEventListener("mouseenter", function () {
+              this.style.transform = "scale(1.2) rotate(5deg)";
+            });
+            icon.addEventListener("mouseleave", function () {
+              this.style.transform = "";
+            });
+          });
+
+          // 키보드 단축키 표시
+          let shortcutTimeout;
+          window.addEventListener("keydown", (e) => {
+            if ((e.key >= "1" && e.key <= "9") || e.key === "0") {
+              // 단축키 피드백 표시
+              const nav = document.getElementById("presentation-nav");
+              nav.style.background =
+                "linear-gradient(135deg, rgba(16, 185, 129, 0.9), rgba(5, 150, 105, 0.8))";
+              nav.style.color = "white";
+
+              clearTimeout(shortcutTimeout);
+              shortcutTimeout = setTimeout(() => {
+                nav.style.background = "";
+                nav.style.color = "";
+              }, 500);
+            }
+          });
+        };
+
+        // DOM이 준비되면 상호작용 효과 추가
+        setTimeout(addInteractiveEffects, 100);
       });
     </script>
   </body>
